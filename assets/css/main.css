@@ -39,9 +39,9 @@
   font-size: 1.3rem;
 }
 
-.header-navbar__list li :hover {
+.header-navbar__list li a :hover {
   opacity: 0.6;
-  position: relative;
+  
 }
 
 .header__navbar-icon {
@@ -63,26 +63,30 @@
 
   padding: 8px;
   margin-top: 13px;
-  pointer-events: none;
+  
   display: none;
 }
 
 .header__qr::before {
-   left: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    background-color: black;
-    top: -32px;
+  left: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  top: -13px;
 }
 
 
 .header-show-qr:hover .header__qr {
   display: block;
+  position: absolute;
 }
 
+.header-show-qr{
+  position: relative;
+}
 .qr-image {
   width: 100%;
 }
@@ -95,4 +99,64 @@
 .social-network-connect img {
   height: 18px;
 }
-/* header QR */
+/* end header QR */
+
+/* begin header notify */
+
+.header__notice {
+  position: relative;
+}
+
+
+.header__notify{
+  width:404px;
+  background-color:var(--white-color);
+  top: 100%;
+  position: absolute;
+  right: 0;
+
+
+
+
+
+}
+
+.header__notify-header {
+
+}
+
+.header__notify-list {
+
+}
+
+.header__notify-body {
+  display: flex;
+
+}
+
+.header__notify-body-img {
+  width: 50%;
+
+}
+
+.header__notify-body-title {
+
+}
+
+.header__notify-body-content {
+
+}
+
+.header__notify-view-all {
+
+}
+
+.header__notify-header {
+
+}
+
+
+
+
+/* begin header notify */
+
