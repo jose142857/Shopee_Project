@@ -3,6 +3,9 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color:#333;
+    --primary-color:#d46018;
+
+
 
 }
 
@@ -33,3 +36,29 @@ margin: 0 auto; /*to center*/
     flex-wrap: wrap;
 }
 
+/* button style */
+.btn {
+    min-width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--white-color);
+}
+
+.btn:hover {
+    background-color: #f0e8e8f7;
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+
+.btn.btn--disable {
+    cursor: default;
+    background-color: #ccc;
+}
+/* end button style */
