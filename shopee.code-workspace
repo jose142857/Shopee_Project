@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../W3-band"
+	},
+	{
+		"path": "../../Bem standards"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Bem standards"
+  }
+}
