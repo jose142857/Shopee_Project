@@ -129,64 +129,6 @@
 }
 /* end header QR */
 
-<<<<<<< HEAD
-/* header notify */
-
-.header-navbar__notice{
-position: relative;
-}
-
-.header__notify {
-width: 400px;
-
-background-color: var(--white-color);
-position: absolute;
-top: 100%;
-right: 0;
-}
-
-
-.header__notify-header {
-height: 40px;
-background-color: var(--white-color);
-
-}
-
-.header__notify-header h3 {
-  color: #666;
-  margin: 0 0 0 12px;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 40px;
-}
-.header__notify-notify-list {
-  padding-left: 0;
-  
-}
-
-.header__notify-item {
-  display: flex;
-}
-
-.header__notify-link {
-  display: flex;
-
-}
-
-.header__notify-img {
-
-}
-
-.header__notify-info {
-
-}
-
-.header__notify-name {
-
-}
-
-.header__notify-desc {
-=======
 /* begin header notify */
 
 .header__notice {
@@ -280,16 +222,11 @@ background-color: var(--white-color);
 
 .header__notify-header {
   
->>>>>>> 45528555b3881213b01546ded9efa448e57f9d3f
 
 }
 
 
-<<<<<<< HEAD
-/* end header notify */
-=======
 
 
 /* begin header notify */
 
->>>>>>> 45528555b3881213b01546ded9efa448e57f9d3f
