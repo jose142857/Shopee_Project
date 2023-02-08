@@ -47,9 +47,9 @@ margin: 0 auto; /*to center*/
     background-color: var(--white-color);
 }
 
-.btn:hover {
+/* .btn:hover {
     background-color: #f0e8e8f7;
-}
+} */
 
 .btn.btn--primary {
     background-color: var(--primary-color);
