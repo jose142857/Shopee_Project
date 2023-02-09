@@ -38,6 +38,7 @@
 
   font-size: 1.3rem;
 }
+
 .header-navbar__list li a {
   color: var(--white-color);
 }
@@ -88,6 +89,7 @@
 .header-show-qr {
   position: relative;
 }
+
 .qr-image {
   width: 100%;
 }
@@ -100,6 +102,7 @@
 .social-network-connect img {
   height: 18px;
 }
+
 /* end header QR */
 
 /* begin header notify */
@@ -120,21 +123,25 @@
   right: 0;
   display: none;
   animation: headerNotifyGrowth ease-in 0.3s;
-  transform-origin: top right; /*set animation's center*/
+  transform-origin: top right;
+  /*set animation's center*/
   z-index: 100;
 }
+
 /* create animation */
 @keyframes headerNotifyGrowth {
   from {
     opacity: 0;
     transform: scale(0);
   }
+
   to {
     opacity: 1;
 
     transform: scale(1);
   }
 }
+
 /* end animation */
 
 .header__notify::before {
@@ -231,7 +238,6 @@
   position: relative;
   top: 160px;
   animation: modalAnimation 0.5s ease;
-
 }
 
 /* css auth__form modal */
@@ -311,6 +317,7 @@
   text-align: center;
   padding: 10px 0;
 }
+
 .btn.btn--with-icon {
   text-transform: capitalize;
   text-decoration: none;
@@ -322,6 +329,7 @@
   color: var(--white-color);
   margin-right: 5px;
 }
+
 .btn--with-icon-google {
   color: rgb(83, 80, 86);
   padding: 5px;
@@ -340,8 +348,6 @@
 /* end css auth__form modal */
 
 /* CSS MODAL__BODY LOGIN */
-
-
 
 .modal__body-login {
   width: 400px;
@@ -372,10 +378,12 @@
   from {
     transform: scale(0);
   }
+
   to {
     transform: scale(1);
   }
 }
+
 /* end modal animation */
 
 /* end modal css */
@@ -405,6 +413,7 @@
   border-radius: 3px;
   display: flex;
 }
+
 .header__search-input-enter {
   width: 100%;
   height: 100%;
@@ -457,6 +466,7 @@
   width: 140px;
   height: 60px;
   text-align: center;
+  position: relative;
 }
 
 .header__search-cart-icon {
@@ -475,6 +485,7 @@
   width: 168px;
   display: none;
 }
+
 .header__search-selection:hover .header__search-option {
   display: block;
 }
@@ -556,7 +567,48 @@
 
 .modal__search-list li a:first-child {
   margin-bottom: 5px;
-
 }
 
 /* END CSS MODAL SEARCH */
+
+/* CSS EMPTY CART */
+
+.header__search-empty-cart {
+  width: 310px;
+  background-color: white;
+  position: absolute;
+  top: 54px;
+  right: 45px;
+  border-radius: 3px;
+  display: none;
+}
+
+.header__search-cart:hover .header__search-empty-cart {
+  display: block;
+}
+
+.header__search-empty-cart::before {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: -28px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+
+}
+
+.header__search-empty-cart-img {
+  width: 212px;
+  height: 102px;
+  margin: 15px -7px 5px 2px;
+}
+
+.header__search-empty-cart-info {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-bottom: 4px;
+}
+
+/*END CSS EMPTY CART */
