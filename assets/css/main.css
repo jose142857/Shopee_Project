@@ -212,7 +212,6 @@
   /* display: flex; */
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
-  animation: modalAnimation 0.5s ease;
 }
 
 /* .modal__overlay {
@@ -231,6 +230,8 @@
   border-radius: 5px;
   position: relative;
   top: 160px;
+  animation: modalAnimation 0.5s ease;
+
 }
 
 /* css auth__form modal */
@@ -340,9 +341,7 @@
 
 /* CSS MODAL__BODY LOGIN */
 
-#id-modal-login {
-  animation: modalAnimation ease-in 0.2s;
-}
+
 
 .modal__body-login {
   width: 400px;

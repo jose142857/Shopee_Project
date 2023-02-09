@@ -140,7 +140,7 @@
               </li>
               <li class="separate-line font-weight-bold">
                 <a
-                  onclick="document.getElementById('id-modal').style.display='block'"
+                  onclick="fnc_openModalRegister()"
                   href="#"
                 >
                   Đăng Ký
@@ -149,7 +149,7 @@
               </li>
               <li class="font-weight-bold">
                 <a
-                  onclick="document.getElementById('id-modal-login').style.display='block'"
+                  onclick="fnc_openModalLogin()"
                   href="#"
                 >
                   Đăng Nhập
@@ -228,7 +228,7 @@
 
     <!-- CREATE REGISTER MODAL-->
     <div id="id-modal" class="modal">
-      <div id="ok" class="modal__overlay"></div>
+      <div class="modal__overlay"></div>
       <div id="id-modal-body" class="modal__body">
         <!-- Authen form -->
 
@@ -296,8 +296,8 @@
 
     <!-- CREATE LOGIN MODAL -->
     <div id="id-modal-login" class="modal">
-      <div id="ok" class="modal__overlay"></div>
-      <div id="id-modal-body" class="modal__body modal__body-login">
+      <div  class="modal__overlay"></div>
+      <div id="id-modal-body-login" class="modal__body modal__body-login">
         <!-- Authen form -->
 
         <div class="auth-form">

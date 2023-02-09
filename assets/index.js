@@ -1,30 +1,39 @@
-// CLOSE MODAL LOGIN & RIGISTER
+// CLOSE MODAL LOGIN & RIGISTER & SEARCH
 
 var modal = document.getElementById("id-modal");
 var modalLogin = document.getElementById("id-modal-login");
 var modalSearch = document.getElementById('id__modal__search');
 
 window.onclick = function (event) {
-
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (!event.target.closest('#id__modal__search') && !event.target.closest('.header__search-input-enter')) {
+    modalSearch.style.display = 'none';
   }
-  if (event.target == modalLogin) {
-    modalLogin.style.display = "none";
+}
+modal.onclick = function (event) {
+  if (!event.target.closest('#id-modal-body')) {
+    modal.style.display = 'none';
   }
-  if (event.target != modalSearch) {
-    modalSearch.style.display = "none";
-    console.log(123)
+}
+
+modalLogin.onclick = function (event) {
+  if (!event.target.closest('#id-modal-body-login')) {
+    modalLogin.style.display = 'none';
   }
-  console.log(event.target)
-  console.log(modalSearch)
+}
+
+// OPEN MODAL REGISTER & LOGIN & SEARCH
+
+function fnc_openModalRegister() {
+  document.getElementById('id-modal').style.display = 'block';
+}
 
 
 
+function fnc_openModalLogin() {
+  document.getElementById('id-modal-login').style.display = 'block';
+}
 
-};
 
-// OPEN MODAL SEARCH
 
 function fnc_openModalSearch() {
   document.getElementById('id__modal__search').style.display = 'block';
