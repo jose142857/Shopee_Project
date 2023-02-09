@@ -121,6 +121,7 @@
   display: none;
   animation: headerNotifyGrowth ease-in 0.3s;
   transform-origin: top right; /*set animation's center*/
+  z-index: 100;
 }
 /* create animation */
 @keyframes headerNotifyGrowth {
@@ -211,8 +212,7 @@
   /* display: flex; */
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
-  animation: modalAnimation 0.5s ease ;
-
+  animation: modalAnimation 0.5s ease;
 }
 
 /* .modal__overlay {
@@ -341,7 +341,7 @@
 /* CSS MODAL__BODY LOGIN */
 
 #id-modal-login {
-animation: modalAnimation ease-in 0.2s;
+  animation: modalAnimation ease-in 0.2s;
 }
 
 .modal__body-login {
@@ -370,12 +370,11 @@ animation: modalAnimation ease-in 0.2s;
 
 /* create modal animation */
 @keyframes modalAnimation {
-  from{
+  from {
     transform: scale(0);
   }
-  to{
+  to {
     transform: scale(1);
-
   }
 }
 /* end modal animation */
@@ -388,12 +387,12 @@ animation: modalAnimation ease-in 0.2s;
   display: flex;
   align-items: center;
   margin: auto 360px;
+  position: relative;
 }
 
 .header__search-logo-img {
   width: 146px;
   height: 39px;
-
 }
 
 .header__search-logo-img path {
@@ -401,11 +400,11 @@ animation: modalAnimation ease-in 0.2s;
 }
 
 .header__search-input {
-height: 40px;
-background-color: var(--white-color);
-flex: 1;
-border-radius: 3px;
-display: flex;
+  height: 40px;
+  background-color: var(--white-color);
+  flex: 1;
+  border-radius: 3px;
+  display: flex;
 }
 .header__search-input-enter {
   width: 100%;
@@ -415,36 +414,29 @@ display: flex;
   padding: 0 16px;
   border-radius: 3px;
   font-size: 1.4rem;
-  
-
 }
 
 .header__search-selection {
- display: flex;
- align-items: center;
- width: 165px;
- border-left: 1px solid rgb(165, 155, 174,0.4);
- padding-left: 5px;
- margin: 3px 0;
- position: relative;
+  display: flex;
+  align-items: center;
+  width: 165px;
+  border-left: 1px solid rgb(165, 155, 174, 0.4);
+  padding-left: 5px;
+  margin: 3px 0;
+  position: relative;
 }
 
 .header__search-selection-text {
   font-size: 1.3rem;
   color: var();
-  
-
 }
 
 .header__search-selection-icon {
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin-left: 10px;
   color: #7d7472;
   position: relative;
   top: 1px;
-  
-  
-
 }
 
 .header__search-input-search-icon {
@@ -462,11 +454,10 @@ display: flex;
   opacity: 0.6;
 }
 
-
 .header__search-cart {
-width: 140px;
-height: 60px;
-text-align: center;
+  width: 140px;
+  height: 60px;
+  text-align: center;
 }
 
 .header__search-cart-icon {
@@ -475,47 +466,98 @@ text-align: center;
   color: white;
 }
 
-
 .header__category {
-
 }
 
 .header__search-option {
-position: absolute;
-right: 0;
-top: 100%;
-width: 168px;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 168px;
+  display: none;
+}
+.header__search-selection:hover .header__search-option {
+  display: block;
+}
+
+.header__search-option::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: -4px;
 }
 
 .header__search-option-item {
   list-style: none;
   background-color: var(--white-color);
   border-radius: 3px;
-  padding:8px ;
+  padding: 8px;
   /* justify-content: flex-end; */
   display: flex;
+  margin-left: 12px;
+}
 
+.header__search-option-item:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .header__search-option-item span {
   font-size: 1.3rem;
   color: #444141;
-
 }
 
 .header__search-option-item i {
   font-size: 1.3rem;
   color: var(--primary-color);
-  margin-right: 28px;
-  margin-left: 5px;
+
+  margin-left: 13px;
   display: none;
-
-
 }
 
-.header__search-option-item--active {
+.header__search-option-item--active i {
   display: inline-block;
 }
 
-
 /* END CSS HEADER - SEARCH */
+
+/* CSS MODAL SEARCH */
+
+.modal__search {
+  background-color: white;
+  position: absolute;
+  top: 53px;
+  left: 147px;
+  width: 361px;
+  border-radius: 3px;
+  box-shadow: 3px 2px 3px 1px #9f888854;
+  display: none;
+}
+
+.modal__search-title {
+  padding: 13px 7px 7px 15px;
+  color: #a8b6c3f5;
+  font-size: 16px;
+}
+
+.modal__search-list {
+  list-style: none;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.modal__search-list li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+  display: block;
+}
+
+.modal__search-list li a:first-child {
+  margin-bottom: 5px;
+
+}
+
+/* END CSS MODAL SEARCH */
