@@ -147,8 +147,14 @@
                 </a>
                 <!--'#'':disable navigation-->
               </li>
-              <li class="font-weight-bold"><a href="">Đăng Nhập</a></li>
-              <li></li>
+              <li class="font-weight-bold">
+                <a onclick="document.getElementById('id-modal-login').style.display='block'"
+                href="#">
+                  Đăng Nhập
+
+                </a>
+              </li>
+              
             </ul>
           </nav>
         </div>
@@ -169,9 +175,9 @@
       <footer class="footer"></footer>
     </div>
 
-    <!-- CREATE MODAL LAYOUT-->
+    <!-- CREATE REGISTER MODAL-->
     <div id="id-modal" class="modal">
-      <div class="modal__overlay"></div>
+      <div id="ok" class="modal__overlay"></div>
       <div id="id-modal-body" class="modal__body">
         <!-- Authen form -->
 
@@ -230,6 +236,70 @@
             <a href="" class="btn btn--with-icon btn--with-icon-google">
               <i class="fa-brands fa-google btn--with-icon-google-g"></i>
               Kết nối với Google
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END REGISTER MODAL-->
+
+    <!-- CREATE LOGIN MODAL -->
+    <div id="id-modal-login" class="modal">
+      <div id="ok" class="modal__overlay"></div>
+      <div id="id-modal-body" class="modal__body modal__body-login">
+        <!-- Authen form -->
+
+        <div class="auth-form">
+          <div class="auth-form__container">
+            <div class="auth-form__header">
+              <h3 class="auth-form__heading">Đăng Nhập</h3>
+              <span class="auth-form__switch-button">Đăng Kí</span>
+            </div>
+            <div class="auth-form__input-form auth-form__input-form-login">
+              <div class="auth-form__input-list">
+                <input
+                  type="text"
+                  placeholder="Email/Số điện thoại/Tên đăng nhập"
+                  class="auth-form__input"
+                />
+                <input
+                  type="text"
+                  placeholder="Mật khẩu"
+                  class="auth-form__input"
+                />
+                
+              </div>
+            </div>
+
+            <div class="auth-form__policy">
+              <p class="auth-form__agreement auth-form__agreement-login">
+                
+                <a href="" class="auth-form__agreement-link auth-form__agreement-link-login-forget"
+                  >Quên Mật Khẩu</a
+                >
+                &
+                <a href="" class="auth-form__agreement-link auth-form__agreement-link-login-help"
+                  >Cần trợ giúp</a
+                >
+              </p>
+            </div>
+
+            <div class="auth-form__controls">
+              <button class="btn">Trở Lại</button>
+              <button class="btn btn--primary">Đăng Nhập</button>
+            </div>
+          </div>
+
+          <div class="auth-form__socials">
+            <a href="" class="btn btn--with-icon btn--with-icon-facebook">
+              <i
+                class="fa-brands fa-square-facebook btn--with-icon-facebook-f"
+              ></i>
+              Đăng Nhập với Facebook
+            </a>
+            <a href="" class="btn btn--with-icon btn--with-icon-google">
+              <i class="fa-brands fa-google btn--with-icon-google-g"></i>
+              Đăng Nhập với Google
             </a>
           </div>
         </div>

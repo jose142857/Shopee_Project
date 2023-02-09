@@ -210,21 +210,24 @@
   left: 0;
   /* display: flex; */
   display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: modalAnimation 0.5s ease ;
+
 }
 
-.modal__overlay {
+/* .modal__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
+  
+} */
 
 .modal__body {
   width: 300px;
   height: 350px;
   background-color: #fff;
   margin: auto;
-  z-index: 1;
+  z-index: 3;
   border-radius: 5px;
   position: relative;
   top: 160px;
@@ -232,10 +235,7 @@
 
 /* css auth__form modal */
 
-
-
 .auth-form {
-  
 }
 
 .auth-form__container {
@@ -283,7 +283,6 @@
 .auth-form__policy {
   margin-top: 3px;
   margin-bottom: 50px;
-
 }
 
 .auth-form__agreement {
@@ -300,7 +299,6 @@
 .auth-form__controls {
   position: absolute;
   right: 22px;
-
 }
 
 .auth-form__socials {
@@ -311,14 +309,10 @@
   background: rgb(204 204 204 / 47%);
   text-align: center;
   padding: 10px 0;
-  
 }
 .btn.btn--with-icon {
-text-transform:capitalize;
-text-decoration: none;
-
-
-
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
 .btn--with-icon-facebook {
@@ -326,7 +320,6 @@ text-decoration: none;
   background-color: #27466e;
   color: var(--white-color);
   margin-right: 5px;
-  
 }
 .btn--with-icon-google {
   color: rgb(83, 80, 86);
@@ -341,10 +334,50 @@ text-decoration: none;
 .btn--with-icon-google-g {
   margin-right: 20px;
   font-size: 1.4rem;
-
-
 }
 
 /* end css auth__form modal */
+
+/* CSS MODAL__BODY LOGIN */
+
+#id-modal-login {
+animation: modalAnimation ease-in 0.2s;
+}
+
+.modal__body-login {
+  width: 400px;
+}
+
+.auth-form__input-form-login {
+  height: 80px;
+}
+
+.auth-form__agreement-login {
+  text-align: right;
+}
+
+.auth-form__agreement-link-login-forget {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.auth-form__agreement-link-login-help {
+  font-size: 11px;
+  color: #9ea19ae0;
+}
+
+/*END CSS MODAL__BODY LOGIN */
+
+/* create modal animation */
+@keyframes modalAnimation {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+
+  }
+}
+/* end modal animation */
 
 /* end modal css */
